@@ -1,0 +1,28 @@
+<div class="container">
+
+<h2>Student Info Form</h2>
+
+ 
+<p>Welcome, {{studentName}}!</p>
+
+ <!-- update name as per input field -->
+<input [(ngModel)]="studentName" [placeholder]="'Enter Student Name'" 
+[ngStyle]="{borderColor: studentName ?'green':'red'}">
+
+ <!-- class based on condition -->
+
+<p [ngClass]="{'valid-name':studentName.length>3, 'invalid-name': studentName.length<=3}">Name must be more than 3 characters.</p>
+
+<button (click)="submitForm()" class="btn">Submit</button>
+
+ <!-- ngif if condition submit true then visible-->
+
+<p *ngIf="submitted">Student submitted successfully!</p>
+
+ <!-- for loop ngfor display the students -->
+<ul>
+    @for (student of students; track $index) {
+         <li >{{student}}</li>
+    }
+</ul>
+</div>

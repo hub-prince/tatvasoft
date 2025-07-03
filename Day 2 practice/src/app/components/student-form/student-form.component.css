@@ -1,0 +1,23 @@
+.valid-name{
+    color: green;
+}
+
+.invalid-name{
+    color: red;
+}
+.container{
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid black;
+    border-radius: 10px;
+    background-color: rgb(193, 175, 175);
+    padding: 3rem;
+    margin-top: 4rem;
+
+}
+.btn{
+     
+    color: white;
+    background-color: blue;
+}
